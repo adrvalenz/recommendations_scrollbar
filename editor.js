@@ -9,7 +9,7 @@ let display_window = document.getElementsByClassName('display-window')[0];
 let rec_content = ['konosuba.html', 'interstellar.html', 'eminence_in_shadow.html', 'deathnote.html'];
 async function createRecommendations()
 {
-    for(let i = 0; i < 4; i++)
+    for(let i = 0; i < rec_content.length; i++)
     {
         let parent_div = document.createElement('div');
         let child_a = document.createElement('a');
@@ -22,7 +22,7 @@ async function createRecommendations()
 }
 
 display_window.addEventListener('mouseover', () => {
-
-})
+    let recom_children = display_window.childNodes;
+});
 
 createRecommendations();
