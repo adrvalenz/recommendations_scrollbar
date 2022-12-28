@@ -1,0 +1,79 @@
+:root {
+    --standard-box-size: 100px;
+    --negative-standard-box-size: -100px;
+    --background-div-width: 1000px;
+    --background-div-height: 400px;
+    --background-div-color: aqua;
+    --recommendation-std-color: #70a;
+    /* Box Sizes for recommendations */
+    --recom-width: 100px;
+    --recom-height: 100px;
+}
+
+.left-div {
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    left: 0%;
+}
+
+.right-div {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    left: 66.66%;
+}
+
+.center-div {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    left: 33.33%;
+}
+
+
+.display-window {
+    height: var(--background-div-height);
+    width: var(--background-div-width);
+    background-color: var(--background-div-color);
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendation {
+    height: var(--recom-height);
+    width: var(--recom-width);
+    top: 30%;
+    background-color: var(--recommendation-std-color);
+    animation: test 10s linear forwards;
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    overflow-wrap: break-word;
+}
+
+.display-window:hover .recommendation{
+    animation-play-state: paused;
+}
+
+@keyframes test {
+    0% {
+        transform: translateX(var(--negative-standard-box-size)) scale(0.25);
+    }
+
+    50% {
+        transform: translateX(400%) scale(1.5);
+    }
+
+    100% {
+        transform: translateX(1000%) scale(0.25) ;
+    }
+}
+/*
+.selector { 
+    transition: property duration transition-timing-function delay; 
+  }
+
+  animation-play-state: paused
+  */
