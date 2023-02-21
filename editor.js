@@ -6,6 +6,7 @@
 // });
 
 let display_window = document.getElementsByClassName('display-window')[0];
+let text_display = document.getElementById('text-display');
 let rec_content = ['konosuba.html', 'interstellar.html', 'eminence_in_shadow.html', 'deathnote.html'];
 async function createRecommendations()
 {
@@ -25,4 +26,13 @@ display_window.addEventListener('mouseover', () => {
     let recom_children = display_window.childNodes;
 });
 
-createRecommendations();
+// createRecommendations();
+
+setTimeout(() => {
+    let mov_elem = document.getElementsByClassName('animation_adapt_test')[0];
+    // mov_elem.style.animation = 'ani-style-test2 5s ease-in-out';
+    mov_elem.style.animationPlayState = 'paused';
+    mov_elem.style.animationDirection = 'reverse';
+    mov_elem.style.animationPlayState = 'running';
+}, 2000);
+
